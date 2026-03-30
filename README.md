@@ -48,7 +48,7 @@ SVR (Support Vector Regression): Implemented a non-linear machine learning appro
 3. Evaluation Metrics
 Evaluated models using Mean Absolute Error (MAE) and Root Mean Square Error (RMSE) to ensure the most reliable forecast for business operations.
 
-### 📊 Data Visualization: Time Series Decomposition
+## 📊 Data Visualization: Time Series Decomposition
 Before modeling, I performed a seasonal decomposition to isolate the underlying trend and weekly seasonality patterns:
 
 ![Time Series Decomposition](time_series_decomposition.png)
