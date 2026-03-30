@@ -25,6 +25,12 @@ Feature Importance: Identified that promotional "Markdown" events had a 3x highe
 
 Actionable Output: Generated a "Safety Stock" recommendation list for store managers based on 95% confidence intervals.
 
+## 📊 Results & Visualization
+The plot below demonstrates the model's ability to capture seasonal peaks and troughs effectively:
+
+![Sales Forecast vs Actuals](sales_forecast_results.png)
+*Figure 1: Comparison between historical sales data and the SARIMA forecast model.*
+
 📈 Data Science Workflow
 
 1. Exploratory Data Analysis (EDA)
