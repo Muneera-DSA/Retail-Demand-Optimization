@@ -1,0 +1,41 @@
+{
+  "model": "Extra trees",
+  "params": {},
+  "cv_rmse": 2.7097324015034308,
+  "tuned": [
+    {
+      "model": "Extra trees",
+      "params": {},
+      "cv_rmse": 2.7097324015034308
+    },
+    {
+      "model": "Random forest",
+      "params": {
+        "randomforestregressor__min_samples_leaf": 5,
+        "randomforestregressor__max_features": 0.5
+      },
+      "cv_rmse": 2.7112477112244524
+    },
+    {
+      "model": "Gradient boosting (squared error)",
+      "params": {
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 63,
+        "min_samples_leaf": 300
+      },
+      "cv_rmse": 2.7195628815397987
+    },
+    {
+      "model": "Gradient boosting (Poisson)",
+      "params": {
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 300
+      },
+      "cv_rmse": 2.7358038653694745
+    }
+  ],
+  "rule": "the 3 best model families (plus Poisson gradient boosting) are tuned on the same CV folds; lowest CV RMSE is chosen"
+}

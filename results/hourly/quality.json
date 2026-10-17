@@ -1,0 +1,174 @@
+{
+  "validity": {
+    "rows": 18247,
+    "columns": [
+      "date",
+      "hour",
+      "demand"
+    ],
+    "unparseable_dates": 0,
+    "hour_outside_0_23": 0,
+    "non_integer_demand": 0,
+    "negative_demand": 0,
+    "zero_demand": 0,
+    "null_values": 0,
+    "demand_min": 1.0,
+    "demand_max": 379.0
+  },
+  "uniqueness": {
+    "duplicate_date_hour": 0,
+    "duplicate_rows": 0
+  },
+  "completeness": {
+    "first_hour": "2018-08-18 00:00:00",
+    "last_hour": "2021-02-28 23:00:00",
+    "grid_hours": 22224,
+    "observed_hours": 18247,
+    "observed_share": 0.8210493160547156,
+    "outage_hours": 720,
+    "gap_hours": 3257,
+    "missing_day_runs": [
+      {
+        "start": "2019-04-28",
+        "end": "2019-04-28",
+        "days": 1
+      },
+      {
+        "start": "2020-11-27",
+        "end": "2020-12-26",
+        "days": 30
+      }
+    ],
+    "missing_share_by_hour_on_recorded_days": {
+      "0": 0.189,
+      "1": 0.344,
+      "2": 0.382,
+      "3": 0.679,
+      "4": 0.637,
+      "5": 0.622,
+      "6": 0.241,
+      "7": 0.099,
+      "8": 0.028,
+      "9": 0.019,
+      "10": 0.012,
+      "11": 0.013,
+      "12": 0.008,
+      "13": 0.007,
+      "14": 0.01,
+      "15": 0.006,
+      "16": 0.003,
+      "17": 0.007,
+      "18": 0.012,
+      "19": 0.019,
+      "20": 0.035,
+      "21": 0.041,
+      "22": 0.065,
+      "23": 0.133
+    },
+    "gap_run_lengths": {
+      "1": 753,
+      "2": 270,
+      "3": 188,
+      "4": 123,
+      "5": 70,
+      "6": 43,
+      "7": 24,
+      "8": 9,
+      "9": 4
+    },
+    "observed_share_dev_vs_test": {
+      "dev": 0.8371156661786238,
+      "test": 0.7758916323731139
+    }
+  },
+  "accuracy": {
+    "robust_outliers": 29,
+    "robust_outlier_share": 0.001589302351071409,
+    "threshold_mad": 5.0,
+    "largest_flagged": [
+      {
+        "ts": "2019-11-14 15:00:00",
+        "demand": 355.0,
+        "robust_z": 7.0
+      },
+      {
+        "ts": "2019-11-14 14:00:00",
+        "demand": 289.0,
+        "robust_z": 7.0
+      },
+      {
+        "ts": "2018-11-10 17:00:00",
+        "demand": 379.0,
+        "robust_z": 6.6
+      },
+      {
+        "ts": "2019-11-10 15:00:00",
+        "demand": 366.0,
+        "robust_z": 6.4
+      },
+      {
+        "ts": "2019-11-14 17:00:00",
+        "demand": 330.0,
+        "robust_z": 6.1
+      },
+      {
+        "ts": "2019-11-14 19:00:00",
+        "demand": 312.0,
+        "robust_z": 6.1
+      },
+      {
+        "ts": "2018-11-09 18:00:00",
+        "demand": 324.0,
+        "robust_z": 6.0
+      },
+      {
+        "ts": "2019-11-13 13:00:00",
+        "demand": 263.0,
+        "robust_z": 6.0
+      },
+      {
+        "ts": "2018-11-09 17:00:00",
+        "demand": 346.0,
+        "robust_z": 6.0
+      },
+      {
+        "ts": "2018-11-09 16:00:00",
+        "demand": 307.0,
+        "robust_z": 6.0
+      }
+    ],
+    "isolated_spikes_3x_both_neighbours": 158,
+    "policy": "flagged values are kept: no evidence they are errors rather than real peaks; models are compared on MAE, which limits their influence"
+  },
+  "consistency": {
+    "file_sorted_by_time": true,
+    "hours_per_recorded_day": {
+      "min": 7,
+      "median": 21.0,
+      "max": 24
+    },
+    "days_with_fewer_than_12_hours": 7,
+    "dst_duplicate_hours": 0
+  },
+  "missingness": {
+    "days_with_night_gap": 846,
+    "days_without": 49,
+    "peak_mean_days_with_night_gap": 91.1159377462569,
+    "peak_mean_days_without": 126.37244897959184,
+    "mannwhitney_p": 3.4432793062391714e-06,
+    "cliffs_delta": -0.39407536064071014,
+    "median_ratio_hour_before_gap_to_typical": 0.9195011337868481,
+    "conclusion": "missing hours are informative: they occur on quieter days and after quieter hours, consistent with hours with no activity recorded (likely zero or closed), not random loss"
+  },
+  "relevance": {
+    "period_days": 926,
+    "dev_hours": 13722,
+    "test_hours": 4525,
+    "dev_mean": 73.06485934994899,
+    "test_mean": 76.80132596685083,
+    "level_change_test_vs_dev": 0.05113903797454511,
+    "hour_of_week_profile_correlation_dev_vs_test": 0.927606827573176,
+    "covid_spring_2020_vs_2019_daily_ratio": 1.071412001250608,
+    "note": "origin and units of the series are not documented; no holiday calendar can be attached without knowing the location"
+  }
+}

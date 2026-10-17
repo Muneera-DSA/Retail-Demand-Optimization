@@ -1,0 +1,74 @@
+[
+  {
+    "id": "H1",
+    "hypothesis": "The model beats the seasonal-naive forecast (same hour last week)",
+    "evidence": "test MAE 29.27 vs 38.93",
+    "p": 7.898000926571108e-18,
+    "direction_ok": true,
+    "p_holm": 5.5286006485997753e-17,
+    "verdict": "supported"
+  },
+  {
+    "id": "H2",
+    "hypothesis": "The model beats the 4-week hour-of-week mean",
+    "evidence": "test MAE 29.27 vs 32.22",
+    "p": 1.3116503452775503e-05,
+    "direction_ok": true,
+    "p_holm": 6.558251726387752e-05,
+    "verdict": "supported"
+  },
+  {
+    "id": "H3",
+    "hypothesis": "The model beats the static hour-of-week profile",
+    "evidence": "test MAE 29.27 vs 30.11",
+    "p": 0.2796276899651392,
+    "direction_ok": true,
+    "p_holm": 0.2924279957197863,
+    "verdict": "not supported"
+  },
+  {
+    "id": "H4",
+    "hypothesis": "A non-linear model beats a linear model with the same features",
+    "evidence": "test MAE 29.27 vs 29.68",
+    "p": 0.14621399785989314,
+    "direction_ok": true,
+    "p_holm": 0.2924279957197863,
+    "verdict": "not supported"
+  },
+  {
+    "id": "H5",
+    "hypothesis": "Weekend demand differs from weekday demand",
+    "evidence": "daily mean ratio 1.19, Cliff's delta +0.47",
+    "p": 1.1871814593470043e-28,
+    "direction_ok": true,
+    "p_holm": 9.497451674776035e-28,
+    "verdict": "supported"
+  },
+  {
+    "id": "H6",
+    "hypothesis": "Unrecorded hours are not missing at random (they fall on quieter days)",
+    "evidence": "afternoon demand 91 vs 126",
+    "p": 3.4432793062391714e-06,
+    "direction_ok": true,
+    "p_holm": 2.0659675837435027e-05,
+    "verdict": "supported"
+  },
+  {
+    "id": "H7",
+    "hypothesis": "The 80% prediction intervals miss their nominal coverage (two-sided binomial)",
+    "evidence": "coverage 78.9%",
+    "p": 0.06579007712974466,
+    "direction_ok": true,
+    "p_holm": 0.19737023138923399,
+    "verdict": "not supported"
+  },
+  {
+    "id": "H8",
+    "hypothesis": "A day-ahead update improves on the week-ahead plan",
+    "evidence": "MAE 28.56 vs 29.48",
+    "p": 2.440767718302717e-05,
+    "direction_ok": true,
+    "p_holm": 9.763070873210868e-05,
+    "verdict": "supported"
+  }
+]

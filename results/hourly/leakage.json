@@ -1,0 +1,5 @@
+{
+  "correct: week-ahead features, time split": 29.477224149770265,
+  "leaky: adds last hour and same hour yesterday (not known a week ahead)": 28.141875272522732,
+  "leaky: random 5-fold split with the short lags": 27.130263328231514
+}

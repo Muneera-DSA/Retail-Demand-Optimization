@@ -1,0 +1,43 @@
+{
+  "model": "Random forest (log scale)",
+  "params": {
+    "min_samples_leaf": 10,
+    "max_features": 0.5
+  },
+  "wape": 0.12281751387096479,
+  "tuned": [
+    {
+      "model": "Random forest (log scale)",
+      "params": {
+        "min_samples_leaf": 10,
+        "max_features": 0.5
+      },
+      "wape": 0.12281751387096479
+    },
+    {
+      "model": "Extra trees (log scale)",
+      "params": {
+        "min_samples_leaf": 10,
+        "max_features": 0.7
+      },
+      "wape": 0.12592690880860127
+    },
+    {
+      "model": "Neural network (MLP 128-64, log scale)",
+      "params": {},
+      "wape": 0.12956485720311944
+    },
+    {
+      "model": "Gradient boosting (log scale, squared error)",
+      "params": {
+        "learning_rate": 0.05,
+        "max_iter": 600,
+        "max_leaf_nodes": 255,
+        "min_samples_leaf": 200,
+        "l2_regularization": 1.0
+      },
+      "wape": 0.12598341996633255
+    }
+  ],
+  "rule": "the 3 best model families of the screen are tuned on the same 4 validation windows; lowest mean WAPE is chosen"
+}

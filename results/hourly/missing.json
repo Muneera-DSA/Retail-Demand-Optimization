@@ -1,0 +1,8 @@
+{
+  "test_mae_recorded_hours_main": 29.268949407766335,
+  "test_mae_recorded_hours_if_gaps_zero": 30.14467849638301,
+  "mean_forecast_recorded_hours_main": 73.00488149839666,
+  "mean_forecast_recorded_hours_if_gaps_zero": 67.45517612880138,
+  "test_mae_all_non_outage_hours_if_gaps_zero": 29.959635622958295,
+  "share_test_hours_unrecorded": 0.11482785602503909
+}

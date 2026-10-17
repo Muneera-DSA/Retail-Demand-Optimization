@@ -1,0 +1,239 @@
+{
+  "protocol": {
+    "validation_window": [
+      "2017-07-15",
+      "2017-07-30"
+    ],
+    "validation_series_sample": 300,
+    "test_window": [
+      "2017-07-31",
+      "2017-08-15"
+    ],
+    "series": 1782,
+    "history_from": "2015-08-01",
+    "scale": "log1p(sales), back-transformed with expm1",
+    "fallback": "series with < 56 days of history, or a failed fit: same-weekday mean of the last 4 weeks"
+  },
+  "families": {
+    "Holt-Winters": {
+      "specs": {
+        "Holt-Winters (ETS A,N,A), weekly": {
+          "validation_wape_sample": 0.13104664377383674,
+          "fallbacks": 0,
+          "seconds": 11.917237520217896
+        },
+        "Holt-Winters (ETS A,Ad,A), weekly": {
+          "validation_wape_sample": 0.13243063267787095,
+          "fallbacks": 0,
+          "seconds": 60.263429164886475
+        }
+      },
+      "chosen": "Holt-Winters (ETS A,N,A), weekly",
+      "test_fallbacks": 0,
+      "test_seconds": 64.02935743331909
+    },
+    "Prophet": {
+      "specs": {
+        "Prophet, weekly + yearly + holidays + promotions": {
+          "validation_wape_sample": 0.2180839803369412,
+          "fallbacks": 0,
+          "seconds": 22.59732699394226
+        },
+        "Prophet, weekly + holidays + promotions": {
+          "validation_wape_sample": 0.2029241911632335,
+          "fallbacks": 0,
+          "seconds": 17.252761602401733
+        }
+      },
+      "chosen": "Prophet, weekly + holidays + promotions",
+      "test_fallbacks": 0,
+      "test_seconds": 99.42375993728638
+    },
+    "ARIMA": {
+      "specs": {
+        "ARIMA(1,1,1)": {
+          "validation_wape_sample": 0.21312147155269476,
+          "fallbacks": 0,
+          "seconds": 73.24059462547302
+        },
+        "ARIMA(2,1,2)": {
+          "validation_wape_sample": 0.21188261168680497,
+          "fallbacks": 0,
+          "seconds": 216.65824151039124
+        }
+      },
+      "chosen": "ARIMA(2,1,2)",
+      "test_fallbacks": 0,
+      "test_seconds": 1163.9128053188324
+    },
+    "SARIMA": {
+      "specs": {
+        "SARIMA(1,0,1)(0,1,1)7": {
+          "validation_wape_sample": 0.12741343744524036,
+          "fallbacks": 0,
+          "seconds": 353.0148403644562
+        },
+        "SARIMA(1,1,1)(0,1,1)7": {
+          "validation_wape_sample": 0.13867588840412137,
+          "fallbacks": 0,
+          "seconds": 416.42628836631775
+        },
+        "SARIMAX(1,0,1)(0,1,1)7 + promotions, national holidays": {
+          "validation_wape_sample": 0.13720821571127567,
+          "fallbacks": 0,
+          "seconds": 544.4821121692657
+        }
+      },
+      "chosen": "SARIMA(1,0,1)(0,1,1)7",
+      "test_fallbacks": 0,
+      "test_seconds": 2379.2283883094788
+    }
+  },
+  "ml_model": "Random forest (log scale)",
+  "table": {
+    "Random forest (log scale)": {
+      "wape": 0.16286664160074416,
+      "rmsle": 0.4465738317590816,
+      "mae": 76.08200335291608,
+      "bias": 0.020194735617055096,
+      "n": 28512
+    },
+    "Ridge (log scale)": {
+      "wape": 0.16131757032048571,
+      "rmsle": 0.4919626427628691,
+      "mae": 75.35836562587652,
+      "bias": -0.03348879180924291,
+      "n": 28512,
+      "wape_diff_vs_ml_store_bootstrap": {
+        "value": -0.0015490714872457953,
+        "ci": [
+          -0.009355754628891155,
+          0.00769331669041837
+        ]
+      },
+      "paired_series_test_vs_ml": {
+        "p": 9.703997073584694e-25,
+        "series_where_a_worse": 0.6013071895424836,
+        "n_series": 1683
+      }
+    },
+    "Same-weekday mean, last 4 weeks": {
+      "wape": 0.17598922546775378,
+      "rmsle": 0.5311304165560388,
+      "mae": 82.21212588725454,
+      "bias": 0.006334977354674927,
+      "n": 28512,
+      "wape_diff_vs_ml_store_bootstrap": {
+        "value": 0.01312258562045334,
+        "ci": [
+          0.005775127396970819,
+          0.02114976280699033
+        ]
+      },
+      "paired_series_test_vs_ml": {
+        "p": 2.56856834572704e-62,
+        "series_where_a_worse": 0.6957813428401664,
+        "n_series": 1683
+      }
+    },
+    "Seasonal naive (same weekday, last week)": {
+      "wape": 0.20665065126908239,
+      "rmsle": 0.6170404183011616,
+      "mae": 96.53539477580028,
+      "bias": 0.004098613142115086,
+      "n": 28512,
+      "wape_diff_vs_ml_store_bootstrap": {
+        "value": 0.043784015518771084,
+        "ci": [
+          0.02972012374645585,
+          0.059837356569327455
+        ]
+      },
+      "paired_series_test_vs_ml": {
+        "p": 1.594312544305911e-134,
+        "series_where_a_worse": 0.8092691622103387,
+        "n_series": 1683
+      }
+    },
+    "Holt-Winters (ETS A,N,A), weekly": {
+      "wape": 0.17232509083606187,
+      "rmsle": 0.48237049799644083,
+      "mae": 80.50045122758227,
+      "bias": -0.004760600192658376,
+      "n": 28512,
+      "wape_diff_vs_ml_store_bootstrap": {
+        "value": 0.009458450499158593,
+        "ci": [
+          0.0021747350551529687,
+          0.01757934362464422
+        ]
+      },
+      "paired_series_test_vs_ml": {
+        "p": 1.06600768907173e-14,
+        "series_where_a_worse": 0.5549613784907903,
+        "n_series": 1683,
+        "p_holm": 2.13201537814346e-14
+      }
+    },
+    "Prophet, weekly + holidays + promotions": {
+      "wape": 0.18031093691798536,
+      "rmsle": 0.45329756852151404,
+      "mae": 84.23098292154457,
+      "bias": 0.001150186755060657,
+      "n": 28512,
+      "wape_diff_vs_ml_store_bootstrap": {
+        "value": 0.0174442976481534,
+        "ci": [
+          -0.0033592021700850952,
+          0.0490457127920306
+        ]
+      },
+      "paired_series_test_vs_ml": {
+        "p": 4.340775075187573e-25,
+        "series_where_a_worse": 0.5882352941176471,
+        "n_series": 1683,
+        "p_holm": 1.3022325225562718e-24
+      }
+    },
+    "ARIMA(2,1,2)": {
+      "wape": 0.20535040203565155,
+      "rmsle": 0.5051552618229771,
+      "mae": 95.92799251364755,
+      "bias": -0.015208504522396273,
+      "n": 28512,
+      "wape_diff_vs_ml_store_bootstrap": {
+        "value": 0.04248376611160063,
+        "ci": [
+          0.03449869524906762,
+          0.05088171629732891
+        ]
+      },
+      "paired_series_test_vs_ml": {
+        "p": 1.0266384951165838e-97,
+        "series_where_a_worse": 0.7052881758764111,
+        "n_series": 1683,
+        "p_holm": 4.1065539804663354e-97
+      }
+    },
+    "SARIMA(1,0,1)(0,1,1)7": {
+      "wape": 0.17095300516260795,
+      "rmsle": 0.4796126145091121,
+      "mae": 79.85949107894656,
+      "bias": -0.019832523722564572,
+      "n": 28512,
+      "wape_diff_vs_ml_store_bootstrap": {
+        "value": 0.008086364642366143,
+        "ci": [
+          -0.0010272973504928612,
+          0.019528393159663187
+        ]
+      },
+      "paired_series_test_vs_ml": {
+        "p": 3.0097186080079046e-12,
+        "series_where_a_worse": 0.5508021390374331,
+        "n_series": 1683,
+        "p_holm": 3.0097186080079046e-12
+      }
+    }
+  }
+}

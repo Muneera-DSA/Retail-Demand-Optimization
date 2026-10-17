@@ -1,0 +1,65 @@
+[
+  {
+    "id": "H1",
+    "hypothesis": "The model has lower error than Seasonal naive (same weekday, last week) on most series",
+    "evidence": "Seasonal naive (same weekday, last week) worse on 81% of series; aggregate WAPE 0.163 vs 0.207 (difference +0.044, CI +0.030 to +0.060)",
+    "p": 1.5913508275699816e-134,
+    "direction_ok": true,
+    "p_holm": 7.956754137849908e-134,
+    "verdict": "supported"
+  },
+  {
+    "id": "H2",
+    "hypothesis": "The model has lower error than Same-weekday mean, last 4 weeks on most series",
+    "evidence": "Same-weekday mean, last 4 weeks worse on 70% of series; aggregate WAPE 0.163 vs 0.176 (difference +0.013, CI +0.006 to +0.021)",
+    "p": 2.567492850433734e-62,
+    "direction_ok": true,
+    "p_holm": 7.702478551301202e-62,
+    "verdict": "supported"
+  },
+  {
+    "id": "H3",
+    "hypothesis": "The model has lower error than Mean of the last 14 days on most series",
+    "evidence": "Mean of the last 14 days worse on 72% of series; aggregate WAPE 0.163 vs 0.208 (difference +0.045, CI +0.036 to +0.055)",
+    "p": 1.809626936018093e-100,
+    "direction_ok": true,
+    "p_holm": 7.238507744072372e-100,
+    "verdict": "supported"
+  },
+  {
+    "id": "H4",
+    "hypothesis": "The model has lower error than Ridge (log scale) on most series",
+    "evidence": "Ridge (log scale) worse on 60% of series; aggregate WAPE 0.163 vs 0.161 (difference -0.002, CI -0.009 to +0.008)",
+    "p": 9.568752724957573e-25,
+    "direction_ok": true,
+    "p_holm": 1.9137505449915145e-24,
+    "verdict": "supported"
+  },
+  {
+    "id": "H5",
+    "hypothesis": "Sales are higher on promotion days (within series; association, not causal)",
+    "evidence": "median ratio 1.30, 98% of 1222 series higher",
+    "p": 0.0,
+    "direction_ok": true,
+    "p_holm": 0.0,
+    "verdict": "supported"
+  },
+  {
+    "id": "H6",
+    "hypothesis": "Sales differ on paydays (15th and month end)",
+    "evidence": "median log difference +0.021, 65% of series higher",
+    "p": 0.0,
+    "direction_ok": true,
+    "p_holm": 0.0,
+    "verdict": "supported"
+  },
+  {
+    "id": "H7",
+    "hypothesis": "Sales differ on national holidays",
+    "evidence": "median log difference +0.025, 55% of series higher",
+    "p": 1.0684486590833062e-21,
+    "direction_ok": true,
+    "p_holm": 1.0684486590833062e-21,
+    "verdict": "supported"
+  }
+]

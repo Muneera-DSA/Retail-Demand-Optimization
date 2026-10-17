@@ -1,0 +1,75 @@
+{
+  "validity": {
+    "rows": 395000,
+    "negative_sales": 0,
+    "non_integer_sales": 0,
+    "non_positive_prices": 0,
+    "price_min": 0.05,
+    "price_max": 44.36,
+    "null_values": {
+      "train_data": 0,
+      "product_prices": 0,
+      "date_to_week_id_map": 0
+    }
+  },
+  "uniqueness": {
+    "duplicate_product_outlet_date": 0,
+    "duplicate_price_rows": 0
+  },
+  "completeness": {
+    "series": 500,
+    "days": 790,
+    "first_date": "2012-01-01",
+    "last_date": "2014-02-28",
+    "grid_cells": 395000,
+    "rows": 395000,
+    "sales_rows_without_price": 0,
+    "zero_sales_share": 0.6243594936708861
+  },
+  "consistency": {
+    "departments_per_product_max": 1,
+    "categories_per_department_max": 1,
+    "states_per_outlet_max": 1,
+    "price_changes_share_of_weeks": 0.010457627118644067,
+    "outlets_by_state": {
+      "Kerala": [
+        331,
+        332,
+        333
+      ],
+      "Maharashtra": [
+        111,
+        112,
+        113,
+        114
+      ],
+      "Telangana": [
+        221,
+        222,
+        223
+      ]
+    }
+  },
+  "accuracy": {
+    "prices_below_half_series_median": 41,
+    "prices_above_double_series_median": 3,
+    "sales_99_9th_percentile": 42.0,
+    "sales_max": 293.0,
+    "series_longest_zero_run_over_180_days": 72,
+    "longest_zero_run_days": 410
+  },
+  "relevance": {
+    "demand_classes": {
+      "intermittent": 375,
+      "lumpy": 79,
+      "smooth": 30,
+      "erratic": 16
+    },
+    "median_zero_share": 0.6778481012658227,
+    "products_by_category": {
+      "drinks_and_food": 17,
+      "fast_moving_consumer_goods": 29,
+      "others": 4
+    }
+  }
+}

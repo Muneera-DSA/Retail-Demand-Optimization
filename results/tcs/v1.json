@@ -1,0 +1,44 @@
+{
+  "design": "per category; cube root of sales and price; IDs and date parts as numeric features; ExtraTreesRegressor(100)",
+  "categories": {
+    "drinks_and_food": {
+      "rows": 134300,
+      "random_split": {
+        "r2_train": 1.0,
+        "r2_test": 0.47994440534675753,
+        "mae_units": 1.6332038531374302
+      },
+      "time_split_last_8_weeks": {
+        "r2_test": 0.07230269946223178,
+        "mae_units": 2.0436234960378865,
+        "rmse_units": 6.517767825521258
+      }
+    },
+    "fast_moving_consumer_goods": {
+      "rows": 229100,
+      "random_split": {
+        "r2_train": 1.0,
+        "r2_test": 0.19902802922529772,
+        "mae_units": 0.5858282875522218
+      },
+      "time_split_last_8_weeks": {
+        "r2_test": -0.05593733862169059,
+        "mae_units": 0.5989098974124449,
+        "rmse_units": 1.2368864270793494
+      }
+    },
+    "others": {
+      "rows": 31600,
+      "random_split": {
+        "r2_train": 1.0,
+        "r2_test": 0.04952640548168774,
+        "mae_units": 0.6217343073099987
+      },
+      "time_split_last_8_weeks": {
+        "r2_test": -0.08384902524579285,
+        "mae_units": 0.5375358597115566,
+        "rmse_units": 1.080479772131006
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "fill_target": 0.95,
+  "weeks": 8,
+  "series": 500,
+  "reference_rule": "Rule of thumb: each item's 90th percentile of its last 26 weekly sales",
+  "policies": {
+    "Extra trees: mean forecast x 7": {
+      "scale_factor_from_calibration": 1.9746474135429246,
+      "fill_rate": 0.943834934305055,
+      "cycle_service_level": 0.904,
+      "stock_vs_demand": 1.917480401922712,
+      "excess_units": 31975.49080278974,
+      "short_units": 1844.5169232459527,
+      "wape_of_weekly_totals": 0.4368566818912007,
+      "stock_vs_demand_at_95pct_fill_ex_post": 2.047025113522288,
+      "stock_saving_vs_rule_ex_post": 0.06630708604233859,
+      "stock_saving_vs_28day_rule_ex_post": 0.3950671609043521
+    },
+    "SBA (Syntetos-Boylan) x 7": {
+      "scale_factor_from_calibration": 2.3499597539545816,
+      "fill_rate": 0.932231254072029,
+      "cycle_service_level": 0.8945,
+      "stock_vs_demand": 2.4147908927151676,
+      "excess_units": 48688.74109367099,
+      "short_units": 2225.5933860121772,
+      "wape_of_weekly_totals": 0.5847817662458356,
+      "stock_vs_demand_at_95pct_fill_ex_post": 3.0006426503264896,
+      "stock_saving_vs_rule_ex_post": -0.36865872402912037,
+      "stock_saving_vs_28day_rule_ex_post": 0.11325598030884687
+    },
+    "Rule of thumb: 28-day average x 7": {
+      "scale_factor_from_calibration": 2.5701463139864726,
+      "fill_rate": 0.9331741390964534,
+      "cycle_service_level": 0.8875,
+      "stock_vs_demand": 2.5617529012386666,
+      "excess_units": 53484.15512866899,
+      "short_units": 2194.6280990899386,
+      "wape_of_weekly_totals": 0.5170442428552042,
+      "stock_vs_demand_at_95pct_fill_ex_post": 3.383888228952018,
+      "stock_saving_vs_rule_ex_post": -0.5434654123811455,
+      "stock_saving_vs_28day_rule_ex_post": 0.0
+    },
+    "Quantile gradient boosting of the 7-day total (q = 0.9)": {
+      "scale_factor_from_calibration": 1.160170317384169,
+      "fill_rate": 0.9461437776016958,
+      "cycle_service_level": 0.93975,
+      "stock_vs_demand": 1.8956342930905414,
+      "excess_units": 31182.21801944878,
+      "short_units": 1768.6922000623097,
+      "wape_of_weekly_totals": 0.7844421280958898,
+      "stock_vs_demand_at_95pct_fill_ex_post": 1.9704101821883055,
+      "stock_saving_vs_rule_ex_post": 0.10125283146448605,
+      "stock_saving_vs_28day_rule_ex_post": 0.4177082548620299,
+      "stock_saving_vs_rule_ex_post_ci": [
+        0.05986169103893346,
+        0.1671975242245625
+      ],
+      "stock_saving_vs_rule_bootstrap_p": 0.002,
+      "stock_saving_vs_28day_rule_ex_post_ci": [
+        0.22878685319379993,
+        0.5127136990249336
+      ],
+      "stock_saving_vs_28day_rule_bootstrap_p": 0.002
+    },
+    "Rule of thumb: each item's 90th percentile of its last 26 weekly sales": {
+      "scale_factor_from_calibration": 1.9090108127890248,
+      "fill_rate": 0.9729297397389229,
+      "cycle_service_level": 0.973,
+      "stock_vs_demand": 3.3043947706770473,
+      "excess_units": 76567.64308124511,
+      "short_units": 889.0144174402038,
+      "wape_of_weekly_totals": 0.90000304497427,
+      "stock_vs_demand_at_95pct_fill_ex_post": 2.192396539506255,
+      "stock_saving_vs_rule_ex_post": 0.0,
+      "stock_saving_vs_28day_rule_ex_post": 0.3521072827558389
+    }
+  }
+}

@@ -1,0 +1,8 @@
+data/favorita/*.csv
+data/favorita/*.zip
+data/tcs/*.csv
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+results/*/cache/

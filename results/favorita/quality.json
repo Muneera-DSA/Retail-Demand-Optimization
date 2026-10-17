@@ -1,0 +1,133 @@
+{
+  "validity": {
+    "train_rows": 3000888,
+    "test_rows": 28512,
+    "negative_sales": 0,
+    "negative_promotions": 0,
+    "fractional_sales_share": 0.15399208500950384,
+    "fractional_sales_families": [
+      "BREAD/BAKERY",
+      "DELI",
+      "FROZEN FOODS",
+      "GROCERY I",
+      "MEATS",
+      "POULTRY",
+      "PREPARED FOODS",
+      "PRODUCE",
+      "SEAFOOD"
+    ],
+    "null_values": {
+      "train": 0,
+      "stores": 0,
+      "oil": 43,
+      "holidays_events": 0,
+      "transactions": 0,
+      "test": 0
+    },
+    "store_numbers_not_in_stores_file": 0
+  },
+  "uniqueness": {
+    "duplicate_store_family_date": 0,
+    "duplicate_transactions": 0,
+    "duplicate_holiday_date_place": 7
+  },
+  "completeness": {
+    "first_date": "2013-01-01",
+    "last_date": "2017-08-15",
+    "series": 1782,
+    "expected_series": 1782,
+    "dates_absent_from_file": [
+      "2013-12-25",
+      "2014-12-25",
+      "2015-12-25",
+      "2016-12-25"
+    ],
+    "stores_opening_after_start": {
+      "20": "2015-02-13",
+      "21": "2015-07-24",
+      "22": "2015-10-09",
+      "29": "2015-03-20",
+      "36": "2013-05-09",
+      "42": "2015-08-21",
+      "52": "2017-04-20",
+      "53": "2014-05-29"
+    },
+    "series_never_selling": 53,
+    "never_selling_by_family": {
+      "BOOKS": 28,
+      "BABY CARE": 12,
+      "LADIESWEAR": 10,
+      "LAWN AND GARDEN": 3
+    },
+    "zero_sales_share": 0.3129506999261552,
+    "zero_share_by_family_top": {
+      "BOOKS": 0.97,
+      "BABY CARE": 0.941,
+      "SCHOOL AND OFFICE SUPPLIES": 0.741,
+      "HOME APPLIANCES": 0.735,
+      "LADIESWEAR": 0.598,
+      "MAGAZINES": 0.565,
+      "PET SUPPLIES": 0.546,
+      "HARDWARE": 0.479
+    },
+    "promotions_first_recorded": "2014-04-01",
+    "oil_missing_values": 43,
+    "oil_days": 1218,
+    "oil_calendar_days_missing": 486,
+    "transactions_store_days_missing_with_sales": 118
+  },
+  "consistency": {
+    "store_days_closed_after_opening": 601,
+    "stores_with_most_closed_days": {
+      "18": 114,
+      "24": 105,
+      "25": 66,
+      "12": 64,
+      "14": 42
+    },
+    "sales_vs_transactions_correlation_store_days": 0.8373836801431694,
+    "transferred_holidays": 12,
+    "transfer_rows": 12,
+    "test_dates_follow_train": true,
+    "test_series_match_train": true
+  },
+  "accuracy": {
+    "robust_outliers_over_6_mad": 12511,
+    "share_of_selling_days": 0.006068122446960312,
+    "largest_single_day": [
+      {
+        "date": "2016-05-02",
+        "store_nbr": "2",
+        "family": "GROCERY I",
+        "sales": "124717.0"
+      },
+      {
+        "date": "2016-10-07",
+        "store_nbr": "39",
+        "family": "MEATS",
+        "sales": "89576.36"
+      },
+      {
+        "date": "2016-04-21",
+        "store_nbr": "20",
+        "family": "GROCERY I",
+        "sales": "87438.516"
+      }
+    ],
+    "policy": "outliers are kept; the model is trained on log1p(sales), which limits their pull"
+  },
+  "relevance": {
+    "stores": 54,
+    "cities": 22,
+    "states": 16,
+    "store_types": {
+      "D": 18,
+      "C": 15,
+      "A": 9,
+      "B": 8,
+      "E": 4
+    },
+    "families": 33,
+    "years_of_history": 4.618754277891855
+  }
+}

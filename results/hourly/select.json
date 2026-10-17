@@ -1,0 +1,77 @@
+{
+  "model": "Extra trees",
+  "params": {
+    "extratreesregressor__min_samples_leaf": 5,
+    "extratreesregressor__max_features": 0.9
+  },
+  "cv_mae": 30.262626701383038,
+  "tuned": [
+    {
+      "model": "Extra trees",
+      "params": {
+        "extratreesregressor__min_samples_leaf": 5,
+        "extratreesregressor__max_features": 0.9
+      },
+      "cv_mae": 30.262626701383038,
+      "fold_mae": [
+        36.52369767522351,
+        31.46938428354266,
+        27.1060516977133,
+        27.181884243889115,
+        29.0321156065466
+      ]
+    },
+    {
+      "model": "Lasso (hour-of-week dummies + history)",
+      "params": {
+        "lasso__alpha": 0.5
+      },
+      "cv_mae": 30.397004548559842,
+      "fold_mae": [
+        38.461072621148645,
+        28.946347350659636,
+        27.389136628422918,
+        27.23594496638082,
+        29.952521176187194
+      ]
+    },
+    {
+      "model": "Ridge (hour-of-week dummies + history)",
+      "params": {
+        "ridge__alpha": 10
+      },
+      "cv_mae": 30.4233584817599,
+      "fold_mae": [
+        37.82391258374028,
+        29.78466545157602,
+        27.332227396890392,
+        27.42590258100609,
+        29.750084395586747
+      ]
+    },
+    {
+      "model": "Gradient boosting (Poisson)",
+      "params": {
+        "learning_rate": 0.05,
+        "max_iter": 150,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 50,
+        "l2_regularization": 1.0
+      },
+      "cv_mae": 31.006602976199105,
+      "fold_mae": [
+        37.09804336973637,
+        34.60569658566847,
+        26.95287020762415,
+        27.365800428248935,
+        29.0106042897176
+      ]
+    }
+  ],
+  "best_baseline": "Static hour-of-week profile",
+  "best_baseline_cv_mae": 30.323001745677907,
+  "cv_gain_vs_best_baseline": 0.06037504429486873,
+  "cv_gain_se": 1.0605506187606113,
+  "recommended_point_forecast": "Static hour-of-week profile",
+  "rule": "the 3 best model families (plus Poisson gradient boosting) are tuned on the same CV folds; the lowest tuned CV MAE is the candidate. One-standard-error rule: if it beats the best baseline by less than one standard error of the fold differences, the simpler baseline is recommended for deployment"
+}

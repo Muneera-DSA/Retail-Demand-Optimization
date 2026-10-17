@@ -1,0 +1,16 @@
+{
+  "correct (information at the order date + planned promotions/holidays)": {
+    "wape": 0.16286663511448035,
+    "rmsle": 0.44657305293597627,
+    "mae": 76.08200032290367,
+    "bias": 0.02019473728710004,
+    "n": 28512
+  },
+  "leaky: adds the target day's store transactions (only known after the day)": {
+    "wape": 0.15831181635354677,
+    "rmsle": 0.4330210561513562,
+    "mae": 73.95424885191312,
+    "bias": 0.025535723807628002,
+    "n": 28512
+  }
+}

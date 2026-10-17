@@ -1,0 +1,2 @@
+# Notebooks are walkthroughs of the Python code in src/; count the code, not the notebooks, in the language statistics
+*.ipynb linguist-documentation

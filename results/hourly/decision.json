@@ -1,0 +1,106 @@
+{
+  "critical_ratio": 0.75,
+  "under_cost": 3.0,
+  "over_cost": 1.0,
+  "plans": {
+    "Model: 75th-percentile forecast": {
+      "cost": 206878.73530214978,
+      "service_level": 0.7381215469613259,
+      "fill_rate": 0.9294823671994539,
+      "idle_capacity_share": 0.2922109179832467,
+      "unmet_units": 24506.710856642603,
+      "idle_units": 133358.60273222197,
+      "planned_units": 456377.8918755794
+    },
+    "Seasonal naive (same hour last week) x 1.21 (buffer tuned on dev)": {
+      "cost": 336238.36866961187,
+      "service_level": 0.6134806629834254,
+      "fill_rate": 0.8088136064674765,
+      "idle_capacity_share": 0.32754341659847047,
+      "unmet_units": 66442.24259878379,
+      "idle_units": 136911.64087326053,
+      "planned_units": 417995.39827447676,
+      "cost_saving_of_model_vs_this": {
+        "value": 0.38472597246797546,
+        "ci": [
+          0.3550290654834286,
+          0.41371932418908625
+        ],
+        "n_boot": 500,
+        "block": 168
+      }
+    },
+    "Hour-of-week mean, last 4 weeks x 1.30 (buffer tuned on dev)": {
+      "cost": 256221.6265738344,
+      "service_level": 0.6784530386740332,
+      "fill_rate": 0.8822451690768794,
+      "idle_capacity_share": 0.3032636309796884,
+      "unmet_units": 40922.86537138839,
+      "idle_units": 133453.03045966921,
+      "planned_units": 440056.1650882808,
+      "cost_saving_of_model_vs_this": {
+        "value": 0.19257894788777974,
+        "ci": [
+          0.1550801610658044,
+          0.2393147984626466
+        ],
+        "n_boot": 500,
+        "block": 168
+      }
+    },
+    "Static hour-of-week profile x 1.33 (buffer tuned on dev)": {
+      "cost": 222285.18154946525,
+      "service_level": 0.6864088397790056,
+      "fill_rate": 0.9020242859761501,
+      "idle_capacity_share": 0.27706128006416797,
+      "unmet_units": 34049.10799185245,
+      "idle_units": 120137.85757390791,
+      "planned_units": 433614.74958205543,
+      "cost_saving_of_model_vs_this": {
+        "value": 0.0693093715915879,
+        "ci": [
+          0.014573757297562873,
+          0.14257123521917664
+        ],
+        "n_boot": 500,
+        "block": 168
+      }
+    },
+    "Empirical 75th percentile of each hour of week (dev)": {
+      "cost": 222561.0,
+      "service_level": 0.6996685082872928,
+      "fill_rate": 0.903418017644723,
+      "idle_capacity_share": 0.27962120377763705,
+      "unmet_units": 33564.75,
+      "idle_units": 121866.75,
+      "planned_units": 435828.0,
+      "cost_saving_of_model_vs_this": {
+        "value": 0.07046277064647544,
+        "ci": [
+          0.015763621265251403,
+          0.1467763068846094
+        ],
+        "n_boot": 500,
+        "block": 168
+      }
+    },
+    "Extra trees: point forecast, no buffer": {
+      "cost": 282062.9033600404,
+      "service_level": 0.4707182320441989,
+      "fill_rate": 0.7847342252235836,
+      "idle_capacity_share": 0.1744575459647284,
+      "unmet_units": 74810.45364494888,
+      "idle_units": 57631.54242519378,
+      "planned_units": 330347.08878024487,
+      "cost_saving_of_model_vs_this": {
+        "value": 0.26655106773087933,
+        "ci": [
+          0.2318023285419543,
+          0.2983464157762796
+        ],
+        "n_boot": 500,
+        "block": 168
+      }
+    }
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "model": "Random forest (log scale)",
+  "window": [
+    "2017-07-31",
+    "2017-08-15"
+  ],
+  "train_rows": 1328341,
+  "table": {
+    "Random forest (log scale)": {
+      "wape": 0.16286663511448035,
+      "rmsle": 0.44657305293597627,
+      "mae": 76.08200032290367,
+      "bias": 0.02019473728710016,
+      "n": 28512
+    },
+    "Seasonal naive (same weekday, last week)": {
+      "wape": 0.2066506516673596,
+      "rmsle": 0.6170404193602742,
+      "mae": 96.53539496185269,
+      "bias": 0.00409862261985012,
+      "n": 28512,
+      "wape_diff_vs_model_store_bootstrap": {
+        "value": 0.04378402240331304,
+        "ci": [
+          0.02972012693247198,
+          0.059837370556432096
+        ]
+      },
+      "paired_series_test_vs_model": {
+        "p": 1.5913508275699816e-134,
+        "series_where_a_worse": 0.8092691622103387,
+        "n_series": 1683
+      }
+    },
+    "Same-weekday mean, last 4 weeks": {
+      "wape": 0.17598922578720738,
+      "rmsle": 0.5311304071385125,
+      "mae": 82.21212603648503,
+      "bias": 0.006334978414744698,
+      "n": 28512,
+      "wape_diff_vs_model_store_bootstrap": {
+        "value": 0.013122592426171632,
+        "ci": [
+          0.005775127852321523,
+          0.021149767705239762
+        ]
+      },
+      "paired_series_test_vs_model": {
+        "p": 2.567492850433734e-62,
+        "series_where_a_worse": 0.6957813428401664,
+        "n_series": 1683
+      }
+    },
+    "Mean of the last 14 days": {
+      "wape": 0.20783769304372168,
+      "rmsle": 0.5191069891862863,
+      "mae": 97.08991297173358,
+      "bias": 0.001018079376451072,
+      "n": 28512,
+      "wape_diff_vs_model_store_bootstrap": {
+        "value": 0.044971063938287974,
+        "ci": [
+          0.03614275394252638,
+          0.05509068052177857
+        ]
+      },
+      "paired_series_test_vs_model": {
+        "p": 1.809626936018093e-100,
+        "series_where_a_worse": 0.7189542483660131,
+        "n_series": 1683
+      }
+    },
+    "Ridge (log scale)": {
+      "wape": 0.1613175745389266,
+      "rmsle": 0.4919629475735534,
+      "mae": 75.35836759649143,
+      "bias": -0.0334887965454286,
+      "n": 28512,
+      "wape_diff_vs_model_store_bootstrap": {
+        "value": -0.0015490607825397204,
+        "ci": [
+          -0.009355733360602636,
+          0.007693339998255786
+        ]
+      },
+      "paired_series_test_vs_model": {
+        "p": 9.568752724957573e-25,
+        "series_where_a_worse": 0.6013071895424836,
+        "n_series": 1683
+      }
+    }
+  },
+  "wape_by_family": {
+    "GROCERY I": {
+      "wape": 0.1354,
+      "sales": 3980412.5
+    },
+    "BEVERAGES": {
+      "wape": 0.1919,
+      "sales": 3005407.0
+    },
+    "PRODUCE": {
+      "wape": 0.1115,
+      "sales": 1977480.375
+    },
+    "CLEANING": {
+      "wape": 0.2398,
+      "sales": 1065243.0
+    },
+    "DAIRY": {
+      "wape": 0.1348,
+      "sales": 721034.0
+    },
+    "BREAD/BAKERY": {
+      "wape": 0.1303,
+      "sales": 466795.5
+    },
+    "POULTRY": {
+      "wape": 0.1437,
+      "sales": 323560.25
+    },
+    "MEATS": {
+      "wape": 0.1367,
+      "sales": 321070.5312
+    },
+    "PERSONAL CARE": {
+      "wape": 0.1667,
+      "sales": 277631.0
+    },
+    "DELI": {
+      "wape": 0.1367,
+      "sales": 261902.9062
+    },
+    "HOME CARE": {
+      "wape": 0.2025,
+      "sales": 251893.0
+    },
+    "EGGS": {
+      "wape": 0.1833,
+      "sales": 172529.0
+    },
+    "FROZEN FOODS": {
+      "wape": 0.185,
+      "sales": 110014.1562
+    },
+    "LIQUOR,WINE,BEER": {
+      "wape": 0.2926,
+      "sales": 84091.0
+    },
+    "PREPARED FOODS": {
+      "wape": 0.1698,
+      "sales": 75871.6562
+    },
+    "SCHOOL AND OFFICE SUPPLIES": {
+      "wape": 0.8953,
+      "sales": 51795.0
+    },
+    "HOME AND KITCHEN I": {
+      "wape": 0.3478,
+      "sales": 27020.0
+    },
+    "HOME AND KITCHEN II": {
+      "wape": 0.3411,
+      "sales": 26789.0
+    },
+    "GROCERY II": {
+      "wape": 0.3471,
+      "sales": 25031.0
+    },
+    "SEAFOOD": {
+      "wape": 0.2265,
+      "sales": 17260.9199
+    },
+    "LAWN AND GARDEN": {
+      "wape": 0.2977,
+      "sales": 12908.0
+    },
+    "CELEBRATION": {
+      "wape": 0.393,
+      "sales": 10768.0
+    },
+    "PLAYERS AND ELECTRONICS": {
+      "wape": 0.2938,
+      "sales": 10084.0
+    },
+    "LADIESWEAR": {
+      "wape": 0.393,
+      "sales": 8711.0
+    },
+    "PET SUPPLIES": {
+      "wape": 0.3235,
+      "sales": 7283.0
+    },
+    "LINGERIE": {
+      "wape": 0.5136,
+      "sales": 6716.0
+    },
+    "AUTOMOTIVE": {
+      "wape": 0.3937,
+      "sales": 6381.0
+    },
+    "MAGAZINES": {
+      "wape": 0.4063,
+      "sales": 6146.0
+    },
+    "BEAUTY": {
+      "wape": 0.3661,
+      "sales": 5757.0
+    },
+    "HARDWARE": {
+      "wape": 0.7371,
+      "sales": 1252.0
+    },
+    "HOME APPLIANCES": {
+      "wape": 1.8747,
+      "sales": 173.0
+    },
+    "BABY CARE": {
+      "wape": 1.2946,
+      "sales": 160.0
+    },
+    "BOOKS": {
+      "wape": 4.3727,
+      "sales": 9.0
+    }
+  },
+  "wape_by_horizon": {
+    "1": 0.1399966594681708,
+    "2": 0.1994741315115019,
+    "3": 0.13453408362808864,
+    "4": 0.148103224840174,
+    "5": 0.16042876510200144,
+    "6": 0.13820420701521224,
+    "7": 0.14353915096559838,
+    "8": 0.12275638623183542,
+    "9": 0.12379870145285533,
+    "10": 0.12249673376699152,
+    "11": 0.14522516258394227,
+    "12": 0.1914325193395827,
+    "13": 0.29874642634159865,
+    "14": 0.2692122615675664,
+    "15": 0.12875104771815543,
+    "16": 0.12618416297520968
+  },
+  "segments": {
+    "intermittent (>50% zero days)": {
+      "rows": 3872,
+      "share_of_sales": 0.00010120742808794603,
+      "wape": 1.0559923199565038,
+      "rmsle": 0.3346532841546663,
+      "mae": 0.36763368990221257,
+      "bias": -0.4154875308808907,
+      "n": 3872
+    },
+    "regular": {
+      "rows": 24640,
+      "share_of_sales": 0.9998987913131714,
+      "wape": 0.1627762350070844,
+      "rmsle": 0.4617003634662803,
+      "mae": 87.97997222237531,
+      "bias": 0.02023883603434405,
+      "n": 24640
+    }
+  }
+}

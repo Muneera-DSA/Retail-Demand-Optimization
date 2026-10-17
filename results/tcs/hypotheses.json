@@ -1,0 +1,57 @@
+[
+  {
+    "id": "H1",
+    "hypothesis": "The model has lower error than Seasonal naive (same weekday last week) on most series",
+    "evidence": "Seasonal naive (same weekday last week) worse on 90% of series; RMSE 3.317 vs 4.526 (difference +1.209, CI +0.885 to +1.560)",
+    "p": 6.005894888509375e-79,
+    "direction_ok": true,
+    "p_holm": 3.6035369331056254e-78,
+    "verdict": "supported"
+  },
+  {
+    "id": "H2",
+    "hypothesis": "The model has lower error than Moving average, 28 days on most series",
+    "evidence": "Moving average, 28 days worse on 67% of series; RMSE 3.317 vs 3.553 (difference +0.236, CI +0.157 to +0.322)",
+    "p": 7.634785207492454e-29,
+    "direction_ok": true,
+    "p_holm": 2.290435562247736e-28,
+    "verdict": "supported"
+  },
+  {
+    "id": "H3",
+    "hypothesis": "The model has lower error than SBA (Syntetos-Boylan) on most series",
+    "evidence": "SBA (Syntetos-Boylan) worse on 73% of series; RMSE 3.317 vs 3.526 (difference +0.209, CI +0.165 to +0.284)",
+    "p": 1.2021549351192343e-40,
+    "direction_ok": true,
+    "p_holm": 6.0107746755961715e-40,
+    "verdict": "supported"
+  },
+  {
+    "id": "H4",
+    "hypothesis": "The model has lower error than Croston on most series",
+    "evidence": "Croston worse on 72% of series; RMSE 3.317 vs 3.547 (difference +0.230, CI +0.177 to +0.311)",
+    "p": 1.0458516910689855e-38,
+    "direction_ok": true,
+    "p_holm": 4.183406764275942e-38,
+    "verdict": "supported"
+  },
+  {
+    "id": "H5",
+    "hypothesis": "Sales are higher when an item is discounted (price < 95% of its usual price)",
+    "evidence": "median log difference +0.095 over 176 series",
+    "p": 1.85329361102049e-06,
+    "direction_ok": true,
+    "p_holm": 3.70658722204098e-06,
+    "verdict": "supported"
+  },
+  {
+    "id": "H6",
+    "hypothesis": "Ordering from the quantile model needs less stock than the per-item 90th-percentile rule for a 95% fill rate",
+    "evidence": "saving +10.1% (series bootstrap CI +6.0% to +16.7%)",
+    "p": 0.002,
+    "direction_ok": true,
+    "note": "two-sided series-bootstrap p-value (500 resamples; floor 1/500)",
+    "p_holm": 0.002,
+    "verdict": "supported"
+  }
+]
